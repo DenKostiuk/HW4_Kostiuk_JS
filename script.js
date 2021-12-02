@@ -1,7 +1,10 @@
-let num = +prompt('Какой номер маршрутки?');
+let num = +prompt('Введите число');
 
-if (num === 7 || num === 225 || num === 115) {
-    console.log('You can go!')
-} else {
-    console.log('Please wait!')
-}
+let num1 = num > Math.PI ? true : false;
+let num2 = num < Math.PI ? true : false;
+let num3 = num === Math.PI ? true : false;
+
+console.log('You entered: ' +num);
+console.log('Is greater then PI: ' +num1);
+console.log('Is less then PI: ' +num2);
+console.log('Is equal PI: ' +num3);
