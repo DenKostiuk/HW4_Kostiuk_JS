@@ -1,10 +1,14 @@
 let num = +prompt('Введите число');
 
-let num1 = num > Math.PI ? true : false;
-let num2 = num < Math.PI ? true : false;
-let num3 = num === Math.PI ? true : false;
+let week = [,
+    "Понедельник", "Вторник",
+    "Среда", "Четверг",
+    "Пятница", "Суббота", "Воскресенье"
+    ];
 
-console.log('You entered: ' +num);
-console.log('Is greater then PI: ' +num1);
-console.log('Is less then PI: ' +num2);
-console.log('Is equal PI: ' +num3);
+while (num < 1 || num > 7) {
+    console.log('Incorrect format');
+    break;
+}
+    
+console.log(week[num]);
