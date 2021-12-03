@@ -1,14 +1,16 @@
-let num = +prompt('Введите число');
+let password = prompt('Придумайте пароль');
 
-let week = [,
-    "Понедельник", "Вторник",
-    "Среда", "Четверг",
-    "Пятница", "Суббота", "Воскресенье"
-    ];
+let upperPass = /[A-Z]/.test(password);
 
-while (num < 1 || num > 7) {
-    console.log('Incorrect format');
-    break;
+if (password === 'qwerty' || password === '123456') {
+    console.log('Weak');
+} else if (upperPass < 1) {
+    console.log('Weak');
+} else if (password.length === 5) {
+    console.log('Middle');
+} else if (password.length < 6) {
+    console.log('Weak');
+} else {
+    console.log('Strong');
 }
-    
-console.log(week[num]);
+
